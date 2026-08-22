@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sahar Souri | The Engineer</title>
+
+    <meta name="description"
+          content="Sahar Souri — Mechanical (Energy) Engineer. Explore my engineering portfolio, projects and professional resume.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f7f4ee;
+            color: #252525;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Navigation */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(247, 244, 238, 0.94);
+            border-bottom: 1px solid #ddd6ca;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.15rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+        }
+
+        nav a:hover {
+            opacity: 0.55;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 7% 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .eyebrow {
+            font-family: Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 0.72rem;
+            margin-bottom: 25px;
+            color: #777066;
+        }
+
+        h1 {
+            font-size: clamp(4rem, 10vw, 8rem);
+            font-weight: normal;
+            line-height: 0.95;
+            letter-spacing: -3px;
+        }
+
+        .subtitle {
+            margin-top: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            margin: 25px auto 45px;
+            max-width: 550px;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #69645d;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 15px 32px;
+            border: 1px solid #252525;
+            font-family: Arial, sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            transition: all 0.25s ease;
+        }
+
+        .button:hover {
+            background: #252525;
+            color: #f7f4ee;
+        }
+
+        .button.secondary {
+            background: #252525;
+            color: #f7f4ee;
+        }
+
+        .button.secondary:hover {
+            background: transparent;
+            color: #252525;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 110px 8%;
+        }
+
+        .section-label {
+            font-family: Arial, sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #777066;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            font-weight: normal;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 1.15rem;
+            color: #55514b;
+        }
+
+        /* Project */
+
+        .project {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .project-card {
+            border-top: 1px solid #cfc8bc;
+            border-bottom: 1px solid #cfc8bc;
+            padding: 45px 0;
+        }
+
+        .project-title {
+            font-size: 2.4rem;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .project-meta {
+            font-family: Arial, sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #777066;
+            margin-bottom: 25px;
+        }
+
+        .project-description {
+            max-width: 750px;
+            color: #55514b;
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+            border-top: 1px solid #ddd6ca;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            font-family: Arial, sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            color: #777066;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 0.65rem;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            section {
+                padding: 80px 7%;
+            }
+
+            .project-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">SAHAR SOURI</div>
+
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">The Engineer</div>
+
+            <h1>Sahar Souri</h1>
+
+            <div class="subtitle">
+                Mechanical (Energy) Engineering
+            </div>
+
+            <p class="tagline">
+                Engineering ideas into practical solutions.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#portfolio" class="button secondary">
+                    View Portfolio
+                </a>
+
+                <a href="#resume" class="button">
+                    View Resume
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="about">
+
+            <div class="section-label">01 — About</div>
+
+            <h2>About Me</h2>
+
+            <p>
+                I’m Sahar Souri, a Mechanical (Energy) Engineer with a
+                strong interest in mechanical building systems, technical
+                design, and energy-related engineering solutions.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy turning engineering concepts into practical,
+                well-structured solutions, with experience in mechanical
+                building services and AutoCAD-based design.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO -->
+
+    <section id="portfolio">
+
+        <div class="project">
+
+            <div class="section-label">02 — Selected Work</div>
+
+            <h2>Portfolio</h2>
+
+            <div class="project-card">
+
+                <div class="project-meta">
+                    AutoCAD · Mechanical Engineering
+                </div>
+
+                <div class="project-title">
+                    Mechanical Building Services Design
+                </div>
+
+                <p class="project-description">
+                    Building mechanical services design developed using
+                    AutoCAD, including technical drawings and system
+                    layouts. This project reflects my experience with
+                    engineering documentation, CAD-based design, and the
+                    practical application of mechanical engineering
+                    principles in building systems.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESUME -->
+
+    <section id="resume">
+
+        <div class="about">
+
+            <div class="section-label">03 — Resume</div>
+
+            <h2>Resume</h2>
+
+            <p>
+                My professional experience, education, technical skills,
+                and engineering background are presented in my resume.
+            </p>
+
+            <br>
+
+            <a href="#" class="button secondary">
+                Download Resume
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <div class="section-label">04 — Contact</div>
+
+        <h2>Let’s Connect</h2>
+
+        <a
+            href="https://www.linkedin.com/in/sahar-souri-44b19b210"
+            target="_blank">
+            LinkedIn
+        </a>
+
+    </section>
+
+
+    <footer>
+        © 2026 Sahar Souri · The Engineer
+    </footer>
+
+</body>
+</html>
